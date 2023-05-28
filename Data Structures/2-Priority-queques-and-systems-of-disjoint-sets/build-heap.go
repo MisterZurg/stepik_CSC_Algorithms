@@ -15,9 +15,6 @@ func parseInput() []int {
 	return notHeap
 }
 
-// Храним обмены здесь
-var swaps [][]int
-
 // Реализация кучи, как по лекциям,
 // только методы, нужные для данной задачи
 // и с модификацией чтобы получилась min-куча
@@ -37,7 +34,6 @@ func (h *MinHeap) ShiftDown(i int) {
 	}
 
 	if i != minIndex {
-		swaps = append(swaps, []int{i, minIndex})
 		(*h)[i], (*h)[minIndex] = (*h)[minIndex], (*h)[i]
 		h.ShiftDown(minIndex)
 	}
@@ -69,10 +65,7 @@ func main() {
 		heap.ShiftDown(i)
 	}
 
-	// Выводим количество обменов
-	fmt.Println(len(swaps))
-	// Выводим обмены
-	for _, swap := range swaps {
-		fmt.Println(swap[0], swap[1])
+	for _, elem := range heap {
+		fmt.Printf("%d ", elem)
 	}
 }

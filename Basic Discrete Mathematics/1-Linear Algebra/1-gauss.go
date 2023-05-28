@@ -1,6 +1,5 @@
 //package main
 //
-//// import numpy as np
 //import (
 //	"fmt"
 //	"math"

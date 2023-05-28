@@ -25,4 +25,5 @@
 ## Sample Output 2:
 ```
 0
-```![img.png](img.png)
+```
+![img.png](img.png)
